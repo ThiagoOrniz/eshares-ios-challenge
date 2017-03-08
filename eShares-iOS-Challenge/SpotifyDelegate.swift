@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol SpotifyDelegate {
+    func dataRetrieved(_ releases:[ReleaseModel])
+}
