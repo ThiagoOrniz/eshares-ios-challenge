@@ -33,7 +33,9 @@ class ReleaseDetailsViewController: UIViewController
         nameLabel.text = release?.name ?? "Unknown"
         artistLabel.text = release?.artistName ?? "Unknown"
         
-        // todo image
+        if let image = release?.image {
+            releaseImageView.fetchImage(forPath: image)
+        }
     }
     
     @IBAction func openSpotifyButtonTouched() {

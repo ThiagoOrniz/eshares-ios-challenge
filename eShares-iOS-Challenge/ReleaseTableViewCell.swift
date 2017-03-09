@@ -19,7 +19,10 @@ class ReleaseTableViewCell: UITableViewCell
         
         nameLabel.text = release.name ?? "Unknown"
         artistLabel.text = release.artistName ?? "Unknown"
-        //todo image
+        
+        if let thumbnail = release.thumbnail {
+            thumbnailImageView.fetchImage(forPath: thumbnail)
+        }
     }
 
 }
