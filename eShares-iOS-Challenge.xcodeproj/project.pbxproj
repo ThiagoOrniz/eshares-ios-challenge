@@ -9,20 +9,20 @@
 /* Begin PBXBuildFile section */
 		0A8E3ECC67588FEEAD1DF332 /* Pods_eShares_iOS_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6689F2C2F7D6019A011753DA /* Pods_eShares_iOS_Challenge.framework */; };
 		74794048C4765D28B079CD75 /* Pods_eShares_iOS_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DC5779758BA4CB7EF36A05 /* Pods_eShares_iOS_ChallengeUITests.framework */; };
-		AF86D24B1E7208640034C1B3 /* ReleaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86D24A1E7208640034C1B3 /* ReleaseTableViewCell.swift */; };
-		AF86D24D1E720A700034C1B3 /* ReleaseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86D24C1E720A700034C1B3 /* ReleaseDetailsViewController.swift */; };
-		AF86D24F1E7210990034C1B3 /* UIImageView+Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86D24E1E7210990034C1B3 /* UIImageView+Fetch.swift */; };
+		AF86D2551E7212C60034C1B3 /* SpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86D2541E7212C60034C1B3 /* SpotifyManager.swift */; };
+		AF86D2581E7212D50034C1B3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86D2561E7212D50034C1B3 /* Config.swift */; };
+		AF86D2591E7212D50034C1B3 /* UIImageView+Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86D2571E7212D50034C1B3 /* UIImageView+Fetch.swift */; };
+		AF86D25B1E7212DF0034C1B3 /* SpotifyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86D25A1E7212DF0034C1B3 /* SpotifyDelegate.swift */; };
+		AF86D25F1E7212F00034C1B3 /* ReleaseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86D25C1E7212F00034C1B3 /* ReleaseDetailsViewController.swift */; };
+		AF86D2601E7212F00034C1B3 /* ReleaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86D25D1E7212F00034C1B3 /* ReleaseTableViewCell.swift */; };
+		AF86D2611E7212F00034C1B3 /* ReleaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86D25E1E7212F00034C1B3 /* ReleaseTableViewController.swift */; };
+		AF86D2631E7212FD0034C1B3 /* ReleaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86D2621E7212FD0034C1B3 /* ReleaseModel.swift */; };
 		AFD4EEA51E6F7983008F42D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4EEA41E6F7983008F42D2 /* AppDelegate.swift */; };
-		AFD4EEA71E6F7983008F42D2 /* ReleaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4EEA61E6F7983008F42D2 /* ReleaseTableViewController.swift */; };
 		AFD4EEAA1E6F7983008F42D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD4EEA81E6F7983008F42D2 /* Main.storyboard */; };
 		AFD4EEAF1E6F7983008F42D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD4EEAE1E6F7983008F42D2 /* Assets.xcassets */; };
 		AFD4EEB21E6F7983008F42D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD4EEB01E6F7983008F42D2 /* LaunchScreen.storyboard */; };
 		AFD4EEBD1E6F7983008F42D2 /* eShares_iOS_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4EEBC1E6F7983008F42D2 /* eShares_iOS_ChallengeTests.swift */; };
 		AFD4EEC81E6F7983008F42D2 /* eShares_iOS_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4EEC71E6F7983008F42D2 /* eShares_iOS_ChallengeUITests.swift */; };
-		AFD4EED81E6F7BAA008F42D2 /* ReleaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4EED71E6F7BAA008F42D2 /* ReleaseModel.swift */; };
-		AFD4EEDA1E6F7BEC008F42D2 /* SpotifyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4EED91E6F7BEC008F42D2 /* SpotifyManager.swift */; };
-		AFD4EEDC1E6F7C20008F42D2 /* SpotifyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4EEDB1E6F7C20008F42D2 /* SpotifyDelegate.swift */; };
-		AFD4EEDE1E6F7C4B008F42D2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4EEDD1E6F7C4B008F42D2 /* Config.swift */; };
 		C7356FEB30F98221621EC1DC /* Pods_eShares_iOS_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCA11422C7E093BE9869B86 /* Pods_eShares_iOS_ChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,12 +51,16 @@
 		376DD7448F3A42BF5E3F2ED3 /* Pods-eShares-iOS-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eShares-iOS-Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eShares-iOS-Challenge/Pods-eShares-iOS-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		658599B5F89D5B4A7EA3432C /* Pods-eShares-iOS-ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eShares-iOS-ChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eShares-iOS-ChallengeTests/Pods-eShares-iOS-ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		6689F2C2F7D6019A011753DA /* Pods_eShares_iOS_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eShares_iOS_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF86D24A1E7208640034C1B3 /* ReleaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReleaseTableViewCell.swift; sourceTree = "<group>"; };
-		AF86D24C1E720A700034C1B3 /* ReleaseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReleaseDetailsViewController.swift; sourceTree = "<group>"; };
-		AF86D24E1E7210990034C1B3 /* UIImageView+Fetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Fetch.swift"; sourceTree = "<group>"; };
+		AF86D2541E7212C60034C1B3 /* SpotifyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpotifyManager.swift; path = Services/SpotifyManager.swift; sourceTree = "<group>"; };
+		AF86D2561E7212D50034C1B3 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Utils/Config.swift; sourceTree = "<group>"; };
+		AF86D2571E7212D50034C1B3 /* UIImageView+Fetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Fetch.swift"; path = "Utils/UIImageView+Fetch.swift"; sourceTree = "<group>"; };
+		AF86D25A1E7212DF0034C1B3 /* SpotifyDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpotifyDelegate.swift; path = Protocols/SpotifyDelegate.swift; sourceTree = "<group>"; };
+		AF86D25C1E7212F00034C1B3 /* ReleaseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReleaseDetailsViewController.swift; path = Controllers/ReleaseDetailsViewController.swift; sourceTree = "<group>"; };
+		AF86D25D1E7212F00034C1B3 /* ReleaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReleaseTableViewCell.swift; path = Controllers/ReleaseTableViewCell.swift; sourceTree = "<group>"; };
+		AF86D25E1E7212F00034C1B3 /* ReleaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReleaseTableViewController.swift; path = Controllers/ReleaseTableViewController.swift; sourceTree = "<group>"; };
+		AF86D2621E7212FD0034C1B3 /* ReleaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReleaseModel.swift; path = Models/ReleaseModel.swift; sourceTree = "<group>"; };
 		AFD4EEA11E6F7983008F42D2 /* eShares-iOS-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eShares-iOS-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD4EEA41E6F7983008F42D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFD4EEA61E6F7983008F42D2 /* ReleaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseTableViewController.swift; sourceTree = "<group>"; };
 		AFD4EEA91E6F7983008F42D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFD4EEAE1E6F7983008F42D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFD4EEB11E6F7983008F42D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,10 +71,6 @@
 		AFD4EEC31E6F7983008F42D2 /* eShares-iOS-ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eShares-iOS-ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD4EEC71E6F7983008F42D2 /* eShares_iOS_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eShares_iOS_ChallengeUITests.swift; sourceTree = "<group>"; };
 		AFD4EEC91E6F7983008F42D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFD4EED71E6F7BAA008F42D2 /* ReleaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReleaseModel.swift; sourceTree = "<group>"; };
-		AFD4EED91E6F7BEC008F42D2 /* SpotifyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyManager.swift; sourceTree = "<group>"; };
-		AFD4EEDB1E6F7C20008F42D2 /* SpotifyDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyDelegate.swift; sourceTree = "<group>"; };
-		AFD4EEDD1E6F7C4B008F42D2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		C3377DDF702F0B3D9045C9D1 /* Pods-eShares-iOS-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eShares-iOS-Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-eShares-iOS-Challenge/Pods-eShares-iOS-Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		F88EB17BB7745D0E7299D512 /* Pods-eShares-iOS-ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eShares-iOS-ChallengeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eShares-iOS-ChallengeUITests/Pods-eShares-iOS-ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,11 +119,44 @@
 		AF86D2491E72083A0034C1B3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AFD4EEA61E6F7983008F42D2 /* ReleaseTableViewController.swift */,
-				AF86D24A1E7208640034C1B3 /* ReleaseTableViewCell.swift */,
-				AF86D24C1E720A700034C1B3 /* ReleaseDetailsViewController.swift */,
+				AF86D25C1E7212F00034C1B3 /* ReleaseDetailsViewController.swift */,
+				AF86D25D1E7212F00034C1B3 /* ReleaseTableViewCell.swift */,
+				AF86D25E1E7212F00034C1B3 /* ReleaseTableViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AF86D2501E7211F80034C1B3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AF86D25A1E7212DF0034C1B3 /* SpotifyDelegate.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		AF86D2511E7212010034C1B3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AF86D2561E7212D50034C1B3 /* Config.swift */,
+				AF86D2571E7212D50034C1B3 /* UIImageView+Fetch.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		AF86D2521E72120E0034C1B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFD4EEA81E6F7983008F42D2 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AF86D2531E7212360034C1B3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AF86D2541E7212C60034C1B3 /* SpotifyManager.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		AFD4EE981E6F7982008F42D2 = {
@@ -151,14 +184,13 @@
 		AFD4EEA31E6F7983008F42D2 /* eShares-iOS-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				AF86D2531E7212360034C1B3 /* Services */,
+				AF86D2521E72120E0034C1B3 /* View */,
+				AF86D2511E7212010034C1B3 /* Utils */,
+				AF86D2501E7211F80034C1B3 /* Protocols */,
 				AF86D2491E72083A0034C1B3 /* Controllers */,
 				AFD4EED61E6F7B9D008F42D2 /* Models */,
 				AFD4EED51E6F79C1008F42D2 /* Supporting Files */,
-				AFD4EEA81E6F7983008F42D2 /* Main.storyboard */,
-				AFD4EED91E6F7BEC008F42D2 /* SpotifyManager.swift */,
-				AFD4EEDB1E6F7C20008F42D2 /* SpotifyDelegate.swift */,
-				AFD4EEDD1E6F7C4B008F42D2 /* Config.swift */,
-				AF86D24E1E7210990034C1B3 /* UIImageView+Fetch.swift */,
 			);
 			path = "eShares-iOS-Challenge";
 			sourceTree = "<group>";
@@ -195,7 +227,7 @@
 		AFD4EED61E6F7B9D008F42D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AFD4EED71E6F7BAA008F42D2 /* ReleaseModel.swift */,
+				AF86D2621E7212FD0034C1B3 /* ReleaseModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -494,15 +526,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFD4EEDA1E6F7BEC008F42D2 /* SpotifyManager.swift in Sources */,
-				AFD4EEA71E6F7983008F42D2 /* ReleaseTableViewController.swift in Sources */,
-				AFD4EED81E6F7BAA008F42D2 /* ReleaseModel.swift in Sources */,
-				AFD4EEDC1E6F7C20008F42D2 /* SpotifyDelegate.swift in Sources */,
-				AF86D24B1E7208640034C1B3 /* ReleaseTableViewCell.swift in Sources */,
+				AF86D2601E7212F00034C1B3 /* ReleaseTableViewCell.swift in Sources */,
+				AF86D2631E7212FD0034C1B3 /* ReleaseModel.swift in Sources */,
+				AF86D2551E7212C60034C1B3 /* SpotifyManager.swift in Sources */,
+				AF86D2581E7212D50034C1B3 /* Config.swift in Sources */,
+				AF86D2611E7212F00034C1B3 /* ReleaseTableViewController.swift in Sources */,
 				AFD4EEA51E6F7983008F42D2 /* AppDelegate.swift in Sources */,
-				AFD4EEDE1E6F7C4B008F42D2 /* Config.swift in Sources */,
-				AF86D24D1E720A700034C1B3 /* ReleaseDetailsViewController.swift in Sources */,
-				AF86D24F1E7210990034C1B3 /* UIImageView+Fetch.swift in Sources */,
+				AF86D2591E7212D50034C1B3 /* UIImageView+Fetch.swift in Sources */,
+				AF86D25B1E7212DF0034C1B3 /* SpotifyDelegate.swift in Sources */,
+				AF86D25F1E7212F00034C1B3 /* ReleaseDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
