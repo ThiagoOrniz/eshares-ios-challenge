@@ -39,13 +39,11 @@ class ReleaseTableViewController: UITableViewController, SpotifyDelegate
         let release = releases[indexPath.row]
         
         cell.populateView(release)
-        
         return cell
     }
 
     // MARK: - SpotifyDelegate
-    func dataRetrieved(_ releases:[ReleaseModel]) {
-        print(releases)
+    func dataRetrieved(_ releases: [ReleaseModel]) {
 
         self.releases = releases
         tableView.reloadData()

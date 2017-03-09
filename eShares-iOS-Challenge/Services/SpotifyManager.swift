@@ -29,8 +29,8 @@ class SpotifyManager {
         getSpotifyAuth()
     }
     
-    private func getSpotifyAuth() {
-        
+    private func getSpotifyAuth()
+    {
         if let data = auth.data(using: .utf8) {
             
             let base = data.base64EncodedString()
@@ -64,8 +64,8 @@ class SpotifyManager {
         
     }
     
-    private func getReleases(_ token: String) {
-        
+    private func getReleases(_ token: String)
+    {
         Alamofire.request("https://api.spotify.com/v1/browse/new-releases?country=US",
                           headers: ["Authorization" : "Bearer \(token)"])
             .responseJSON { (response: DataResponse<Any>) in
@@ -82,8 +82,8 @@ class SpotifyManager {
         }
     }
     
-    private func convertJson(_ json: JSON) -> [ReleaseModel] {
-        
+    private func convertJson(_ json: JSON) -> [ReleaseModel]
+    {
         var releases: [ReleaseModel] = []
 
         for (_, item):(String,JSON) in json["albums"]["items"] {
@@ -114,8 +114,8 @@ class SpotifyManager {
         return releases
     }
     
-    private func retrieveArtists(_ artists:JSON) -> String? {
-        
+    private func retrieveArtists(_ artists:JSON) -> String?
+    {
         var artistsName: String?
         
         for (_,artist):(String, JSON) in artists {

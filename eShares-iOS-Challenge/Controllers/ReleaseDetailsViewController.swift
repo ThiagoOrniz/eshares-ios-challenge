@@ -21,10 +21,11 @@ class ReleaseDetailsViewController: UIViewController
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     
+        openSpotifyButton.layer.cornerRadius = 15
         populateView()
     }
     
-    func setRelease(_ release:ReleaseModel) {
+    func setRelease(_ release: ReleaseModel) {
         self.release = release
     }
     
@@ -40,6 +41,18 @@ class ReleaseDetailsViewController: UIViewController
     
     @IBAction func openSpotifyButtonTouched() {
         
+        if let url = URL(string: release?.url ?? "" ) {
+            
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:])
+                
+            } else {
+                print("can't open url")
+            }
+            
+        } else {
+            print("problem url")
+        }
     }
     
 }

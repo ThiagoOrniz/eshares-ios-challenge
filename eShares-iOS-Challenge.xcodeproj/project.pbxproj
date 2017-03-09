@@ -119,9 +119,9 @@
 		AF86D2491E72083A0034C1B3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AF86D25E1E7212F00034C1B3 /* ReleaseTableViewController.swift */,
 				AF86D25C1E7212F00034C1B3 /* ReleaseDetailsViewController.swift */,
 				AF86D25D1E7212F00034C1B3 /* ReleaseTableViewCell.swift */,
-				AF86D25E1E7212F00034C1B3 /* ReleaseTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

@@ -18,7 +18,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" id="fIR-5c-oDh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.43921568630000002" green="0.4431372549" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.43921568630000002" green="0.4431372549" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReleaseTableViewCell" rowHeight="75" id="fuc-n4-ygM" customClass="ReleaseTableViewCell" customModule="eShares_iOS_Challenge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="75"/>
@@ -38,13 +39,13 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SONG/TRACK NAME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mx-YV-6Yy">
                                             <rect key="frame" x="84" y="16" width="267" height="21"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARTIST NAME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ip4-DQ-7d9">
                                             <rect key="frame" x="84" y="37" width="267" height="21"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -60,6 +61,7 @@
                                         <constraint firstItem="YFj-3S-fer" firstAttribute="leading" secondItem="GIb-f7-QY6" secondAttribute="leading" constant="8" id="vw3-Ph-4qF"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.43921568630000002" green="0.4431372549" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="artistLabel" destination="ip4-DQ-7d9" id="08v-DW-zkP"/>
                                     <outlet property="nameLabel" destination="5Mx-YV-6Yy" id="T3S-Zd-RQT"/>
@@ -91,15 +93,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotify_logo_text" translatesAutoresizingMaskIntoConstraints="NO" id="LW7-Zj-rs9">
-                                <rect key="frame" x="0.0" y="64" width="375" height="269"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotify_logo_text" translatesAutoresizingMaskIntoConstraints="NO" id="LW7-Zj-rs9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="269.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3P-hE-rGs">
-                                <rect key="frame" x="112" y="318" width="150" height="30"/>
+                                <rect key="frame" x="112" y="318.5" width="150" height="30"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.73333333329999995" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="pGU-oc-R0D"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="OPEN IN SPOTIFY">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -108,19 +111,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SONG/TRACK NAME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOT-rZ-qIw">
-                                <rect key="frame" x="32" y="380" width="311" height="21"/>
+                                <rect key="frame" x="32" y="380.5" width="311" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARTIST NAME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M32-L6-vqJ">
-                                <rect key="frame" x="32" y="409" width="311" height="21"/>
+                                <rect key="frame" x="32" y="409.5" width="311" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="X3P-hE-rGs" firstAttribute="centerY" secondItem="uZm-B1-Lev" secondAttribute="centerY" id="7ne-AA-93s"/>
                             <constraint firstItem="LW7-Zj-rs9" firstAttribute="leading" secondItem="uZm-B1-Lev" secondAttribute="leading" id="G6w-W9-9Th"/>
@@ -151,7 +154,7 @@
         <scene sceneID="3vb-IO-HLp">
             <objects>
                 <navigationController id="Jj8-bf-FV1" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cWy-A7-n2G">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cWy-A7-n2G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
