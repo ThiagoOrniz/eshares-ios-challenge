@@ -8,8 +8,18 @@
 
 import UIKit
 
-class ReleaseTableViewCell: UITableViewCell {
+class ReleaseTableViewCell: UITableViewCell
+{
 
-
+    @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var artistLabel: UILabel!
+    
+    func populateView(_ release:ReleaseModel){
+        
+        nameLabel.text = release.name ?? "Unknown"
+        artistLabel.text = release.artistName ?? "Unknown"
+        //todo image
+    }
 
 }

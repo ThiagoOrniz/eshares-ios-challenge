@@ -46,7 +46,10 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="giW-iI-U2P" kind="show" id="qAv-gu-VQu"/>
+                                    <outlet property="artistLabel" destination="ip4-DQ-7d9" id="08v-DW-zkP"/>
+                                    <outlet property="nameLabel" destination="5Mx-YV-6Yy" id="T3S-Zd-RQT"/>
+                                    <outlet property="thumbnailImageView" destination="YFj-3S-fer" id="tiA-hC-kWS"/>
+                                    <segue destination="giW-iI-U2P" kind="show" identifier="ReleaseDetailsSegue" id="qAv-gu-VQu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -61,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="732" y="121.88905547226388"/>
         </scene>
-        <!--View Controller-->
+        <!--Release Details View Controller-->
         <scene sceneID="RP1-DA-kQd">
             <objects>
-                <viewController id="giW-iI-U2P" sceneMemberID="viewController">
+                <viewController id="giW-iI-U2P" customClass="ReleaseDetailsViewController" customModule="eShares_iOS_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CVc-DV-xgN"/>
                         <viewControllerLayoutGuide type="bottom" id="JPg-mi-Szo"/>
@@ -81,6 +84,9 @@
                                 <rect key="frame" x="164" y="318" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="openSpotifyButtonTouched" destination="giW-iI-U2P" eventType="touchUpInside" id="L2B-d4-obA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOT-rZ-qIw">
                                 <rect key="frame" x="166" y="383" width="42" height="21"/>
@@ -99,6 +105,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="artistLabel" destination="M32-L6-vqJ" id="QBO-WF-IRe"/>
+                        <outlet property="nameLabel" destination="rOT-rZ-qIw" id="Y6m-OR-SBi"/>
+                        <outlet property="openSpotifyButton" destination="X3P-hE-rGs" id="yrS-3X-zzM"/>
+                        <outlet property="releaseImageView" destination="LW7-Zj-rs9" id="16W-s9-tpR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYJ-eH-wJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,7 @@
 		0A8E3ECC67588FEEAD1DF332 /* Pods_eShares_iOS_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6689F2C2F7D6019A011753DA /* Pods_eShares_iOS_Challenge.framework */; };
 		74794048C4765D28B079CD75 /* Pods_eShares_iOS_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DC5779758BA4CB7EF36A05 /* Pods_eShares_iOS_ChallengeUITests.framework */; };
 		AF86D24B1E7208640034C1B3 /* ReleaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86D24A1E7208640034C1B3 /* ReleaseTableViewCell.swift */; };
+		AF86D24D1E720A700034C1B3 /* ReleaseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86D24C1E720A700034C1B3 /* ReleaseDetailsViewController.swift */; };
 		AFD4EEA51E6F7983008F42D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4EEA41E6F7983008F42D2 /* AppDelegate.swift */; };
 		AFD4EEA71E6F7983008F42D2 /* ReleaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4EEA61E6F7983008F42D2 /* ReleaseTableViewController.swift */; };
 		AFD4EEAA1E6F7983008F42D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD4EEA81E6F7983008F42D2 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		658599B5F89D5B4A7EA3432C /* Pods-eShares-iOS-ChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eShares-iOS-ChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eShares-iOS-ChallengeTests/Pods-eShares-iOS-ChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		6689F2C2F7D6019A011753DA /* Pods_eShares_iOS_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eShares_iOS_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF86D24A1E7208640034C1B3 /* ReleaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReleaseTableViewCell.swift; sourceTree = "<group>"; };
+		AF86D24C1E720A700034C1B3 /* ReleaseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReleaseDetailsViewController.swift; sourceTree = "<group>"; };
 		AFD4EEA11E6F7983008F42D2 /* eShares-iOS-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eShares-iOS-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD4EEA41E6F7983008F42D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFD4EEA61E6F7983008F42D2 /* ReleaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseTableViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				AFD4EEA61E6F7983008F42D2 /* ReleaseTableViewController.swift */,
 				AF86D24A1E7208640034C1B3 /* ReleaseTableViewCell.swift */,
+				AF86D24C1E720A700034C1B3 /* ReleaseDetailsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				AF86D24B1E7208640034C1B3 /* ReleaseTableViewCell.swift in Sources */,
 				AFD4EEA51E6F7983008F42D2 /* AppDelegate.swift in Sources */,
 				AFD4EEDE1E6F7C4B008F42D2 /* Config.swift in Sources */,
+				AF86D24D1E720A700034C1B3 /* ReleaseDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

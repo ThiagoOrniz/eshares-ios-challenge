@@ -8,18 +8,21 @@
 
 import UIKit
 
-class ReleaseTableViewController: UITableViewController, SpotifyDelegate {
+class ReleaseTableViewController: UITableViewController, SpotifyDelegate
+{
 
     var releases: [ReleaseModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 75
+
         SpotifyManager(delegate: self).startRetrievingData()
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -35,14 +38,31 @@ class ReleaseTableViewController: UITableViewController, SpotifyDelegate {
         
         let release = releases[indexPath.row]
         
+        cell.populateView(release)
+        
         return cell
     }
 
-    
-    
     // MARK: - SpotifyDelegate
-    func dataRetrieved(_ releases:[ReleaseModel]){
+    func dataRetrieved(_ releases:[ReleaseModel]) {
         print(releases)
+
+        self.releases = releases
+        tableView.reloadData()
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ReleaseDetailsSegue" {
+            
+            if let index = self.tableView.indexPathForSelectedRow?.row {
+                
+                let releaseDetailsViewController = segue.destination as! ReleaseDetailsViewController
+                releaseDetailsViewController.setRelease(releases[index])
+                
+            }
+        }
     }
     
 }
