@@ -6,10 +6,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Release Table View Controller-->
         <scene sceneID="ycR-cU-j20">
             <objects>
                 <tableViewController id="ip6-yd-Uti" customClass="ReleaseTableViewController" customModule="eShares_iOS_Challenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,32 +20,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReleaseTableViewCell" rowHeight="76" id="fuc-n4-ygM" customClass="ReleaseTableViewCell" customModule="eShares_iOS_Challenge" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="76"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReleaseTableViewCell" rowHeight="75" id="fuc-n4-ygM" customClass="ReleaseTableViewCell" customModule="eShares_iOS_Challenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fuc-n4-ygM" id="GIb-f7-QY6">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFj-3S-fer">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotify_logo" translatesAutoresizingMaskIntoConstraints="NO" id="YFj-3S-fer">
                                             <rect key="frame" x="8" y="8" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="YFj-3S-fer" secondAttribute="height" multiplier="1:1" id="T6Q-ba-SEW"/>
+                                                <constraint firstAttribute="height" constant="60" id="h50-8s-TnT"/>
+                                                <constraint firstAttribute="width" constant="60" id="zjd-xH-mKF"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mx-YV-6Yy">
-                                            <rect key="frame" x="76" y="8" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SONG/TRACK NAME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mx-YV-6Yy">
+                                            <rect key="frame" x="84" y="16" width="267" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ip4-DQ-7d9">
-                                            <rect key="frame" x="76" y="37" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARTIST NAME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ip4-DQ-7d9">
+                                            <rect key="frame" x="84" y="37" width="267" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5Mx-YV-6Yy" firstAttribute="leading" secondItem="YFj-3S-fer" secondAttribute="trailing" constant="16" id="3kY-Om-7Sw"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="5Mx-YV-6Yy" secondAttribute="trailing" constant="16" id="3zY-M1-0jY"/>
+                                        <constraint firstItem="5Mx-YV-6Yy" firstAttribute="top" secondItem="GIb-f7-QY6" secondAttribute="topMargin" constant="8" id="8RG-5U-o55"/>
+                                        <constraint firstItem="ip4-DQ-7d9" firstAttribute="top" secondItem="5Mx-YV-6Yy" secondAttribute="bottom" id="C83-Pb-DnL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ip4-DQ-7d9" secondAttribute="trailing" constant="16" id="Dcl-Gg-hcy"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ip4-DQ-7d9" secondAttribute="bottom" constant="8" id="MJn-Lq-7uP"/>
+                                        <constraint firstItem="ip4-DQ-7d9" firstAttribute="leading" secondItem="YFj-3S-fer" secondAttribute="trailing" constant="16" id="gg6-eS-LMk"/>
+                                        <constraint firstItem="YFj-3S-fer" firstAttribute="centerY" secondItem="GIb-f7-QY6" secondAttribute="centerY" id="pB6-qZ-4wA"/>
+                                        <constraint firstItem="YFj-3S-fer" firstAttribute="leading" secondItem="GIb-f7-QY6" secondAttribute="leading" constant="8" id="vw3-Ph-4qF"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="artistLabel" destination="ip4-DQ-7d9" id="08v-DW-zkP"/>
@@ -58,7 +73,7 @@
                             <outlet property="delegate" destination="ip6-yd-Uti" id="Rno-kP-2ho"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Yd6-Hz-iBZ"/>
+                    <navigationItem key="navigationItem" id="Yd6-Hz-iBZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvD-SP-UDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,34 +91,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LW7-Zj-rs9">
-                                <rect key="frame" x="0.0" y="64" width="375" height="260"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotify_logo_text" translatesAutoresizingMaskIntoConstraints="NO" id="LW7-Zj-rs9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="269"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3P-hE-rGs">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3P-hE-rGs">
+                                <rect key="frame" x="112" y="318" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.73333333329999995" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="pGU-oc-R0D"/>
+                                </constraints>
+                                <state key="normal" title="OPEN IN SPOTIFY">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="openSpotifyButtonTouched" destination="giW-iI-U2P" eventType="touchUpInside" id="L2B-d4-obA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOT-rZ-qIw">
-                                <rect key="frame" x="166" y="383" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SONG/TRACK NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOT-rZ-qIw">
+                                <rect key="frame" x="32" y="380" width="311" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M32-L6-vqJ">
-                                <rect key="frame" x="168" y="421" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARTIST NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M32-L6-vqJ">
+                                <rect key="frame" x="32" y="409" width="311" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X3P-hE-rGs" firstAttribute="centerY" secondItem="uZm-B1-Lev" secondAttribute="centerY" id="7ne-AA-93s"/>
+                            <constraint firstItem="LW7-Zj-rs9" firstAttribute="leading" secondItem="uZm-B1-Lev" secondAttribute="leading" id="G6w-W9-9Th"/>
+                            <constraint firstAttribute="trailing" secondItem="LW7-Zj-rs9" secondAttribute="trailing" id="GQR-LJ-mYB"/>
+                            <constraint firstItem="X3P-hE-rGs" firstAttribute="centerX" secondItem="uZm-B1-Lev" secondAttribute="centerX" id="ISY-S1-G6c"/>
+                            <constraint firstItem="M32-L6-vqJ" firstAttribute="leading" secondItem="uZm-B1-Lev" secondAttribute="leadingMargin" constant="16" id="KKf-ZT-JJW"/>
+                            <constraint firstItem="X3P-hE-rGs" firstAttribute="top" secondItem="LW7-Zj-rs9" secondAttribute="bottom" constant="-15" id="L0s-VC-TcC"/>
+                            <constraint firstItem="rOT-rZ-qIw" firstAttribute="top" secondItem="X3P-hE-rGs" secondAttribute="bottom" constant="32" id="W6w-QS-Ne7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M32-L6-vqJ" secondAttribute="trailing" constant="16" id="cRp-br-hPL"/>
+                            <constraint firstItem="rOT-rZ-qIw" firstAttribute="leading" secondItem="uZm-B1-Lev" secondAttribute="leadingMargin" constant="16" id="gXo-vU-gVm"/>
+                            <constraint firstItem="M32-L6-vqJ" firstAttribute="top" secondItem="rOT-rZ-qIw" secondAttribute="bottom" constant="8" id="nUb-Ei-Kqv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rOT-rZ-qIw" secondAttribute="trailing" constant="16" id="pzQ-BQ-fiT"/>
+                            <constraint firstItem="LW7-Zj-rs9" firstAttribute="top" secondItem="CVc-DV-xgN" secondAttribute="bottom" id="xxK-go-Bxn"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="artistLabel" destination="M32-L6-vqJ" id="QBO-WF-IRe"/>
@@ -133,4 +164,8 @@
             <point key="canvasLocation" x="-220" y="122"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="spotify_logo" width="2000" height="2000"/>
+        <image name="spotify_logo_text" width="2000" height="601"/>
+    </resources>
 </document>
