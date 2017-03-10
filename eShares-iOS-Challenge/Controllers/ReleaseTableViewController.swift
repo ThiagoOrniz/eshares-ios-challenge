@@ -11,7 +11,8 @@ import UIKit
 class ReleaseTableViewController: UITableViewController, SpotifyDelegate
 {
 
-    var releases: [ReleaseModel] = []
+    private var releases: [ReleaseModel] = []
+    private var spotifyManager: SpotifyManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,19 @@ class ReleaseTableViewController: UITableViewController, SpotifyDelegate
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 75
 
-        SpotifyManager(delegate: self).startRetrievingData()
+        spotifyManager = SpotifyManager(delegate: self)
+        spotifyManager?.retrieveData()
+        
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(loadMoreReleases), for: UIControlEvents.valueChanged)
+        
+        tableView.refreshControl?.beginRefreshing()
+        let rect = CGRect.init(x: 0, y: 0, width: 1, height: 1)
+        tableView.scrollRectToVisible(rect, animated: true)
+    }
+    
+    func loadMoreReleases(){
+       spotifyManager?.retrieveData()
     }
     
     // MARK: - Table view data source
@@ -35,7 +48,6 @@ class ReleaseTableViewController: UITableViewController, SpotifyDelegate
     {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReleaseTableViewCell", for: indexPath) as! ReleaseTableViewCell
-        
         let release = releases[indexPath.row]
         
         cell.populateView(release)
@@ -44,9 +56,16 @@ class ReleaseTableViewController: UITableViewController, SpotifyDelegate
 
     // MARK: - SpotifyDelegate
     func dataRetrieved(_ releases: [ReleaseModel]) {
-
-        self.releases = releases
+        
+        tableView.refreshControl?.endRefreshing()
+        self.releases.insert(contentsOf: releases, at: 0)
         tableView.reloadData()
+    }
+    
+    func spotifyRequestDidFail() {
+        let alert = UIAlertController(title: "Couldn't retrieve releases", message: "Verify your internet.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: - Navigation
@@ -62,6 +81,5 @@ class ReleaseTableViewController: UITableViewController, SpotifyDelegate
             }
         }
     }
-    
 }
 

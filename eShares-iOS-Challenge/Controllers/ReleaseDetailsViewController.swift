@@ -21,7 +21,7 @@ class ReleaseDetailsViewController: UIViewController
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     
-        openSpotifyButton.layer.cornerRadius = 15
+        openSpotifyButton.layer.cornerRadius = 20
         populateView()
     }
     
