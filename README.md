@@ -1,6 +1,17 @@
 # eShares iOS Challenge
 
 
+## How?
+
+Create a file called Config.swift and add two strings
+
+```sh
+struct Config {
+static let clientID = "#################"
+static let clientSecret = "###############"
+}
+```
+
 ## Description & Goal:
 Create an App that lists the new releases on Spotify using the public API
 Provide a working solution of the test via Pull Request
